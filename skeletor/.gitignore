@@ -1,0 +1,5 @@
+/vendor
+/.phpactor.yml
+/.phpactor/*
+/.php_cs.cache
+/.phpunit.result.cache

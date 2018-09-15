@@ -1,0 +1,36 @@
+{
+    "title": "PHP library",
+    "description": "Skeleton for a Phpactor package",
+    "params": {
+        "project.name": "Name here",
+        "project.namespace": "Phpactor\\\\Package",
+        "project.description": "Description about my project",
+        "author.name": "Anonymous",
+        "author.email": "anonymous@example.com",
+        "package.name": "phpactor/my-package"
+    },
+    "basedir": "skeletor",
+    "files": {
+        "lib": {
+            "type": "dir"
+        },
+        "tests": { 
+            "type": "dir"
+        },
+        "LICENSE": {},
+        "README.md": {},
+        ".php_cs.dist": {},
+        ".travis.yml": {},
+        ".gitignore": {},
+        "phpstan.neon": {},
+        "phpunit.xml.dist": {},
+        "composer.json": {}
+    },
+    "post_install": [
+        "composer validate",
+        "composer require --dev phpstan/phpstan phpunit/phpunit friendsofphp/php-cs-fixer",
+        "./vendor/bin/phpunit",
+        "./vendor/bin/php-cs-fixer fix --dry-run",
+        "./vendor/bin/phpstan analyse --level=7"
+    ]
+}
