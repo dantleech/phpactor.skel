@@ -7,7 +7,7 @@
     >
 
     <testsuites>
-        <testsuite name="{{ project.name }}">
+        <testsuite name="{{ extension.name }}">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>

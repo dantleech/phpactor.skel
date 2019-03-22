@@ -1,25 +1,33 @@
 {
     "name": "{{ package.name }}",
-    "description": "{{ project.description }}",
+    "description": "{{ extension.description }}",
     "license": "MIT",
+    "type": "phpactor-extension",
     "authors": [
         {
             "name": "{{ author.name }}",
             "email": "{{ author.email }}"
         }
     ],
+
     "require": {
     },
     "require-dev": {
     },
     "autoload": {
         "psr-4": {
-            "{{ project.namespace }}\\": "lib/"
+            "Phpactor\\Extension\\{{ extension.name }}\\": "lib/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "{{ project.namespace }}\\Tests\\": "tests/"
+            "Phpactor\\Extension\\{{ extension.name }}\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "phpactor.extension_class": "Phpactor\\Extension\\{{ extension.name }}\\{{ extension.name }}Extension",
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
         }
     }
 }

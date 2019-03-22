@@ -2,12 +2,12 @@
     "title": "PHP library",
     "description": "Skeleton for a Phpactor package",
     "params": {
-        "project.name": "Name here",
-        "project.namespace": "Phpactor\\\\Package",
-        "project.description": "Description about my project",
+        "extension.name": "ExtensionName",
+        "extension.title": "Nice Title",
+        "extension.description": "Description about my project",
         "author.name": "Anonymous",
         "author.email": "anonymous@example.com",
-        "package.name": "phpactor/my-package"
+        "package.name": "phpactor/my-extension"
     },
     "basedir": "skeletor",
     "files": {
@@ -29,6 +29,7 @@
     "post_install": [
         "git init",
         "composer validate",
+        "composer require phpactor/container:^1.0 --no-update",
         "composer require --dev phpstan/phpstan phpunit/phpunit friendsofphp/php-cs-fixer --no-update",
         "git add -A",
         "git commit -m \"initial\"",
